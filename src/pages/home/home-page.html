@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../components/style.css">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
 
     <!--Set Title-->
     <title>Flip Coin</title>
@@ -18,13 +18,15 @@
 
 <body>
     <main class="main-container">
-        <h1 class="title">Flip A Coin!</h1>
+        <h1 class="heading" id="title">Flip A Coin!</h1>
         <div class="img-container">
-            <img src="#" alt="Coin Heads Side Up">
+            <img class="coin-img" src="../../assets/imgs/coin/coin-heads-001.png" alt="Coin Heads Side Up">
         </div>
-        <button class="flip-button">
+        <button class="button" id="flip-button">
             <h2 class="button-title">Flip Coin</h2>
         </button>
     </main>
+
+    <script type="text/javascript" src="../../features/coin-flip-animation/coin-flip-animation.js"></script>
 </body>
 </html>
