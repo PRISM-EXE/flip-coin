@@ -74,3 +74,14 @@ body {
     cursor: pointer;
 }
 
+
+@media screen and (width <= 7200px) {
+    .button {
+        width: 33%;
+    }
+
+    .img-container {
+        width: 100%;
+        height: auto;
+    }
+}
