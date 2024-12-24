@@ -28,6 +28,7 @@ body {
 #title {
     width: 33%;
     text-align: center;
+    margin: 1rem auto;
 }
 
 .img-container {
@@ -64,10 +65,12 @@ body {
     border: none;
 }
 
+.button h2 {
+    margin: 1rem auto;
+}
+
 .button:hover {
     opacity: 0.5;
     cursor: pointer;
-    transform: scale(1.025);
-    transition: ease-in-out;
 }
 
