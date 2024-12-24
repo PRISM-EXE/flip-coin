@@ -9,12 +9,12 @@ const flipCoin = function() {
     if (odds < 0.5) {
         let answer = "Heads";
         newTitle = `It's ${answer}!`;
-        imageUrl = "../../assets/imgs/coin/coin-heads-001.png";
+        imageUrl = "./src/assets/imgs/coin/coin-heads-001.png";
         return [newTitle, imageUrl];
     } else {
         let answer = "Tails";
         newTitle = `It's ${answer}!`;
-        imageUrl = "../../assets/imgs/coin/coin-tails-001.png";
+        imageUrl = "./src/assets/imgs/coin/coin-tails-001.png";
         return [newTitle, imageUrl];
     }
 }
