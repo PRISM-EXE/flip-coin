@@ -37,9 +37,24 @@ body {
     align-items: center;
 }
 
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(720deg);
+    }
+}
+
 .coin-img {
     width: 30%;
     height: auto;
+    animation-name: none;
+    animation-duration: 0;
+}
+
+.coin-img.flip {
+    animation-name: spin;
+    animation-duration: 1s;
 }
 
 .button {
@@ -53,5 +68,6 @@ body {
     opacity: 0.5;
     cursor: pointer;
     transform: scale(1.025);
+    transition: ease-in-out;
 }
 

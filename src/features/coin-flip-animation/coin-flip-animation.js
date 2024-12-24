@@ -1,22 +1,34 @@
 const title = document.querySelector("#title");
 const button = document.querySelector("#flip-button");
+const coin = document.querySelector("#coin-001");
 let newTitle = "";
+let imageUrl = "";
 
 const flipCoin = function() {
     const odds = Math.random();
     if (odds < 0.5) {
-        let coin = "Heads";
-        newTitle = `It's ${coin}!`
-        return newTitle;
+        let answer = "Heads";
+        newTitle = `It's ${answer}!`;
+        imageUrl = "../../assets/imgs/coin/coin-heads-001.png";
+        return [newTitle, imageUrl];
     } else {
-        let coin = "Tails";
-        newTitle = `It's ${coin}!`
-        return newTitle;
+        let answer = "Tails";
+        newTitle = `It's ${answer}!`;
+        imageUrl = "../../assets/imgs/coin/coin-tails-001.png";
+        return [newTitle, imageUrl];
     }
 }
 
 button.addEventListener('click', flipCoin);
 
 button.addEventListener('click', function() {
-    title.textContent = newTitle;
+    
+    coin.classList.add('flip');
+
+    setTimeout(function() {
+        coin.src = `${imageUrl}`;
+        title.textContent = newTitle;
+        coin.classList.remove('flip');
+    }, 1000);
+
 })
