@@ -28,6 +28,9 @@ button.addEventListener('click', function() {
     setTimeout(function() {
         coin.src = `${imageUrl}`;
         title.textContent = newTitle;
+    }, 500);
+
+    setTimeout(function() {
         coin.classList.remove('flip');
     }, 1000);
 
