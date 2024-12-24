@@ -1,9 +1,13 @@
+//Declare variables to represent html elements
 const title = document.querySelector("#title");
 const button = document.querySelector("#flip-button");
 const coin = document.querySelector("#coin-001");
 let newTitle = "";
 let imageUrl = "";
 
+//Create main functions for coin flip
+
+//Create function to determine if coin landed on heads or tails
 const flipCoin = function() {
     const odds = Math.random();
     if (odds < 0.5) {
@@ -19,10 +23,8 @@ const flipCoin = function() {
     }
 }
 
-button.addEventListener('click', flipCoin);
-
-button.addEventListener('click', function() {
-
+//Create function to animate the coin spinning
+const coinAnimation = function() {
     coin.classList.add('flip');
 
     setTimeout(function() {
@@ -33,5 +35,8 @@ button.addEventListener('click', function() {
     setTimeout(function() {
         coin.classList.remove('flip');
     }, 1000);
+}
 
-})
+//Call functions based on button click
+button.addEventListener('click', flipCoin);
+button.addEventListener('click', coinAnimation);
